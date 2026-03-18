@@ -71,8 +71,6 @@ export function initGlobalParallax() {
 }
 
 export function initScrambleText() {
-  if (window.innerWidth < 992) return;
-
   // Function to reveal stuff on load
   function initScrambleOnLoad() {
     let targets = document.querySelectorAll('[data-scramble="load"]');
@@ -172,8 +170,6 @@ export function initScrambleText() {
 }
 
 export function initContentRevealScroll() {
-  if (window.innerWidth < 992) return;
-
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const ctx = gsap.context(() => {

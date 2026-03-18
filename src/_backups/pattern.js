@@ -201,8 +201,6 @@ function initScroll(wrapperEl) {
 }
 
 export function runPattern() {
-  if (window.innerWidth < 992) return;
-
   $('[data-pattern]').each(function () {
     const mode = $(this).data('pattern');
     const ccClass = [...this.classList].find((c) => c.startsWith('cc-'));

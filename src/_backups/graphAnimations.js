@@ -1,6 +1,4 @@
 export function initGraphsAnimation() {
-  if (window.innerWidth < 992) return;
-
   // ─── Utilities ─────────────────────────────────────────────────────────────
 
   const tlTemplate = (trigger, start = 'top center') =>
@@ -443,11 +441,9 @@ export function initGraphsAnimation() {
     const human = $el.find('.platform-illustrations_human')[0];
     const baseBoxes = $el.find('.platform-illustrations_base-box').toArray();
     const queryBox = $el.find('.platform-illustration_query-box')[0];
-    const labels = $el.find('.platform-illustrations_label').toArray();
 
     // ── Initial hidden state ──────────────────────────────────────────────────
     gsap.set([logo, options, human, queryBox].filter(Boolean), { autoAlpha: 0, y: 20 });
-    gsap.set(labels, { autoAlpha: 0, y: 8 });
     gsap.set(agentBoxes, { autoAlpha: 0, y: 24 });
     gsap.set(serviceBoxes, { autoAlpha: 0, y: 20 });
     gsap.set(baseBoxes, { autoAlpha: 0, y: 16 });
@@ -526,11 +522,6 @@ export function initGraphsAnimation() {
     // 7. Query box — the interactive UI, last to appear
     if (queryBox) {
       tl.to(queryBox, { autoAlpha: 1, y: 0, duration: 0.4 }, '');
-    }
-
-    // 8. Labels — fade in after everything is visible
-    if (labels.length) {
-      tl.to(labels, { autoAlpha: 1, y: 0, duration: 0.3, stagger: 0.06 }, '>-0.1');
     }
 
     return tl;

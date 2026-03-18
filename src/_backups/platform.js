@@ -18,8 +18,6 @@ const GROUP_SPREAD = 3; // seconds — total stagger spread across all groups
 // ─────────────────────────────────────────────────────────────────────────────
 
 export function initPlatformDots(selector = '[data-dots="platform"]') {
-  if (window.innerWidth < 992) return;
-
   const svg = document.querySelector(selector);
   if (!svg) return;
 
