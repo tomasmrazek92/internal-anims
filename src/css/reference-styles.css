@@ -1,0 +1,87 @@
+/* Reference Gallery
+   ========================================================================== */
+
+/* Container
+   ========================================================================== */
+.reference-gallery {
+  position: relative;
+  overflow: hidden;
+}
+
+.reference-gallery__section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Lists Containers
+   ========================================================================== */
+.reference-gallery__items-wrap,
+.reference-gallery__photos-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Lists
+   ========================================================================== */
+.reference-gallery__list {
+  position: relative;
+  left: 0;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.reference-gallery__list--items,
+.reference-gallery__list--photos {
+  position: relative;
+}
+
+/* Duplicates
+   ========================================================================== */
+.reference-gallery__list.duplicate-before,
+.reference-gallery__list.duplicate-after {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  opacity: 0.5;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.reference-gallery__list.duplicate-before {
+  left: -100%;
+}
+
+.reference-gallery__list.duplicate-after {
+  left: 100%;
+}
+
+/* Items
+   ========================================================================== */
+.reference-gallery__item {
+  opacity: 0.2;
+  transition: opacity 0.3s ease;
+}
+
+.reference-gallery__item.active {
+  opacity: 1;
+}
+
+/* Apply these classes to your existing elements */
+.section_reference_hero {
+  composes: reference-gallery__section;
+}
+
+.reference_hero-wrap_left,
+.reference_hero-wrap_right {
+  composes: reference-gallery__items-wrap;
+}
+
+.reference_items-collection-list,
+.reference_photo-collection-list {
+  composes: reference-gallery__list;
+}
+
+.reference_items-collection-item,
+.reference_photo-collection-item {
+  composes: reference-gallery__item;
+}

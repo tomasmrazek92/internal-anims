@@ -1,0 +1,173 @@
+/* Row */
+.attendees-faces-holder .row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+}
+.attendees-faces-holder .row:before,
+.attendees-faces-holder .row:after {
+  display: none;
+}
+
+/* Item */
+.entity-photo-holder {
+  width: 100% !important;
+  margin: 0;
+  border-radius: 16px;
+  background-color: #0f6fff;
+  padding: 32px 16px;
+  padding-top: 40px;
+  padding-bottom: 32px;
+  margin-bottom: 0px !important;
+}
+
+/* Image */
+.trade-template .speakers .entity-photo-holder img,
+.trade-template .speakers .object-trade-thumbnail {
+  margin-bottom: 20px;
+  width: 200px;
+  min-width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+/* Text */
+.trade-template .speakers .attendee-name,
+.trade-template .speakers .attendee-title,
+.trade-template .speakers .attendee-company {
+  margin: 0;
+}
+.trade-template .speakers .attendee-title,
+.trade-template .speakers .attendee-company {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #13171b !important;
+}
+
+/* __ Responsive __ */
+@media only screen and (max-width: 992px) {
+  .attendees-faces-holder .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .attendees-faces-holder .row {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Safari Fix */
+.speaker-socials-wrapper {
+  display: none !important;
+}
+.speaker-image-wrapper {
+  float: none !important;
+}
+.speaker-bio-wrapper {
+  float: none !important;
+}
+.speaker-view .speaker-container .speaker-profile {
+  display: flex;
+}
+@media only screen and (max-width: 992px) {
+  .speaker-view .speaker-container .speaker-profile {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.col-md-pull-4 {
+  right: 0 !important;
+}
+
+.speaker-name {
+  margin-top: 0;
+}
+
+/*____ Sponsors ____ */
+.main-app-container {
+  padding: 0 !important;
+}
+
+.element-32358980 {
+  display: none;
+}
+
+.business-template .sponsors .partner-logo-container {
+  height: 270px;
+  border: 1px solid #626e7f;
+  border-radius: 16px;
+}
+
+@media (min-width: 601px) {
+  .business-template .sponsors .partners-container {
+    flex-wrap: nowrap;
+  }
+
+  .business-template .sponsors .partner-container:first-child {
+    width: 90%;
+  }
+}
+
+.Component-partnerModal-0-2-1 {
+  height: 100% !important;
+}
+
+/* ___ Modal ___ */
+.modal.fade.in {
+  position: fixed;
+  overflow: hidden;
+  height: 100vh;
+  bottom: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 100%;
+  transform: none;
+  min-width: 100%;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-dialog {
+  padding-top: 0 !important;
+}
+
+.x-for-closing-popup {
+  display: none !important;
+}
+.form-control {
+  background-color: #fff;
+  color: #526273;
+  border: 1px solid #b0b7c2;
+  padding-left: 3px;
+  border: 1px solid #d3d1d1;
+  background-color: white;
+  color: var(--charcoal);
+  border-radius: 8px;
+  height: auto;
+  min-height: 60px;
+  margin-bottom: 0;
+  padding: 5px 20px;
+  font-size: 18px;
+  line-height: 1.5;
+  transition: border-color 0.35s;
+}
+
+.form-group .atom-label {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #626e7f !important;
+}
+
+.error {
+  display: none;
+}
+.error.error-visible {
+  display: block;
+}
